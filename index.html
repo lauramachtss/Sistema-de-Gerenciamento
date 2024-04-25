@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gerenciamento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Sistema de Gerenciamento</h1>
+      <nav>
+        <ul>
+          <li><a href="#cadastro-produto">Cadastrar Produto</a></li>
+          <li><a href="#calcular-custo">Calcular Custo</a></li>
+          <li><a href="#vender-produto">Vender Produto</a></li>
+          <li><a href="#calcular-lucro">Calcular Lucro</a></li>
+          <li><a href="#cadastro-cliente-fornecedor">Cadastrar Cliente/Fornecedor</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <section id="cadastro-produto">
+        <h2>Cadastrar Produto</h2>
+        <!-- Formulário de cadastro de produto -->
+        <form id="form-cadastro-produto">
+          <label for="preco-compra">Preço de Compra:</label>
+          <input type="number" id="preco-compra" name="preco-compra" step="0.01" required><br>
+
+          <label for="preco-venda">Preço de Venda:</label>
+          <input type="number" id="preco-venda" name="preco-venda" step="0.01" required><br>
+
+          <label for="icms">ICMS:</label>
+          <input type="number" id="icms" name="icms" step="0.01" required><br>
+
+          <label for="tipo-pagamento">Tipo de Pagamento:</label>
+          <select id="tipo-pagamento" name="tipo-pagamento">
+            <option value="credito">Crédito</option>
+            <option value="debito">Débito</option>
+          </select><br>
+
+          <button type="submit">Cadastrar</button>
+        </form>
+      </section>
+
+      <section id="calcular-custo">
+        <h2>Calcular Custo</h2>
+        <!-- Formulário para calcular o custo -->
+        <form id="form-calcular-custo">
+          <!-- Inputs para calcular o custo -->
+        </form>
+      </section>
+
+      <!-- Outras seções e formulários aqui -->
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

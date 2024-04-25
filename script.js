@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const formCadastroProduto = document.getElementById('form-cadastro-produto');
     formCadastroProduto.addEventListener('submit', function(event) {
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Imposto:', imposto);
       console.log('Tipo de Pagamento:', tipoPagamento);
     });
-  
-    // Adicione lógica para outros formulários e funcionalidades aqui
+
   });
   

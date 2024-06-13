@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="PT-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema de Gestão</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 <!--- 
-**PROJETO TESTE**
-  
 Tela de abertura do sistema
 
 - Cadastrar Produto
@@ -30,73 +28,97 @@ Tela de abertura do sistema
 
 - Cidade / Estado
 -->
-<div class="container">
-  <h1>Sistema de Gestão</h1>
-  <div class="space>"></div>
-  <button id="btnAbrirCadastroProduto">Cadastrar Produto</button>
-  <button id="btnAbrirVendaProduto">Vender Produto</button>
-  <button id="btnAbrirCadastroCliente">Cadastrar Cliente</button>
-  <button id="btnAbrirCadastroFornecedor">Cadastrar Fornecedor</button>
-</div>
-
-<div id="modalCadastroProduto" class="modal">
-  <form id="formCadastroProduto">
-    <h2>Cadastrar Produto</h2>
-    <label for="precoCompra">Preço de Compra:</label>
-    <input type="number" id="precoCompra" required><br>
-    <label for="precoVenda">Preço de Venda:</label>
-    <input type="number" id="precoVenda" required><br>
-    <label for="icms">ICMS:</label>
-    <input type="number" id="icms" required><br>
-    <button type="submit">Cadastrar</button>
-    <button type="button" class="close" onclick="closeModal(modalCadastroProduto)">Fechar</button>
-  </form>
-</div>
-
-<div id="modalVendaProduto" class="modal">
-  <form id="formVendaProduto">
-    <h2>Vender Produto</h2>
-    <label for="vendaAVista">Venda a vista</label>
-    <input type="checkbox" id="vendaAVista" name="vendaType" value="vista">
-    <label for="vendaAPrazo">Venda a prazo</label>
-    <input type="checkbox" id="vendaAPrazo" name="vendaType" value="prazo">
-    <button type="submit">Confirmar</button>
-    <button type="button" class="close" onclick="closeModal(modalVendaProduto)">Fechar</button>
-  </form>
-</div>
-
-<div id="modalCadastroCliente" class="modal">
-  <form id="formCadastroCliente">
-    <h2>Cadastrar Cliente</h2>
-    <label for="cpfCnpjCliente">CPF/CNPJ:</label>
-    <input type="text" id="cpfCnpjCliente" required><br>
-    <label for="nomeCliente">Nome:</label>
-    <input type="text" id="nomeCliente" required><br>
-    <label for="cidadeCliente">Cidade:</label>
-    <input type="text" id="cidadeCliente" required><br>
-    <label for="estadoCliente">Estado:</label>
-    <input type="text" id="estadoCliente" required><br>
-    <button type="submit">Cadastrar</button>
-    <button type="button" class="close" onclick="closeModal(modalCadastroCliente)">Fechar</button>
-  </form>
-</div>
-
-<div id="modalCadastroFornecedor" class="modal">
-  <form id="formCadastroFornecedor">
-    <h2>Cadastrar Fornecedor</h2>
-    <label for="cpfCnpjFornecedor">CPF/CNPJ:</label>
-    <input type="text" id="cpfCnpjFornecedor" required><br>
-    <label for="nomeFornecedor">Nome:</label>
-    <input type="text" id="nomeFornecedor" required><br>
-    <label for="cidadeFornecedor">Cidade:</label>
-    <input type="text" id="cidadeFornecedor" required><br>
-    <label for="estadoFornecedor">Estado:</label>
-    <input type="text" id="estadoFornecedor" required><br>
-    <button type="submit">Cadastrar</button>
-    <button type="button" class="close" onclick="closeModal(modalCadastroFornecedor)">Fechar</button>
-  </form>
-</div>
-  
+<body>
+  <div class="container">
+    <h1>Sistema de Gestão</h1>
+    <div class="space"></div>
+    <button id="btnAbrirCadastroProduto">Cadastrar Produto</button>
+    <button id="btnAbrirVendaProduto">Vender Produto</button>
+    <button id="btnAbrirCadastroCliente">Cadastrar Cliente</button>
+    <button id="btnAbrirCadastroFornecedor">Cadastrar Fornecedor</button>
+    <button id="btnAbrirCadastroBens">Cadastrar Bens</button>
+    <button id="btnGerarRelatorios">Gerar Relatórios</button>
+  </div>
+  <!-- Cadastro de Produto -->
+  <div id="modalCadastroProduto" class="modal">
+    <form id="formCadastroProduto">
+      <h2>Cadastrar Produto</h2>
+      <label for="precoCompra">Preço de Compra:</label>
+      <input type="number" id="precoCompra" required><br>
+      <label for="precoVenda">Preço de Venda:</label>
+      <input type="number" id="precoVenda" required><br>
+      <label for="icms">ICMS:</label>
+      <input type="number" id="icms" required><br>
+      <button type="submit">Cadastrar</button>
+      <button type="button" class="close" onclick="closeModal(modalCadastroProduto)">Fechar</button>
+    </form>
+  </div>
+  <!--Venda de Produto -->
+  <div id="modalVendaProduto" class="modal">
+    <form id="formVendaProduto">
+      <h2>Vender Produto</h2>
+      <label for="vendaAVista">Venda à vista</label>
+      <input type="checkbox" id="vendaAVista" name="vendaType" value="vista">
+      <label for="vendaAPrazo">Venda a prazo</label>
+      <input type="checkbox" id="vendaAPrazo" name="vendaType" value="prazo">
+      <button type="submit">Confirmar</button>
+      <button type="button" class="close" onclick="closeModal(modalVendaProduto)">Fechar</button>
+    </form>
+  </div>
+  <!--Cadastro de Cliente -->
+  <div id="modalCadastroCliente" class="modal">
+    <form id="formCadastroCliente">
+      <h2>Cadastrar Cliente</h2>
+      <label for="cpfCnpjCliente">CPF/CNPJ:</label>
+      <input type="text" id="cpfCnpjCliente" required><br>
+      <label for="nomeCliente">Nome:</label>
+      <input type="text" id="nomeCliente" required><br>
+      <label for="cidadeCliente">Cidade:</label>
+      <input type="text" id="cidadeCliente" required><br>
+      <label for="estadoCliente">Estado:</label>
+      <input type="text" id="estadoCliente" required><br>
+      <button type="submit">Cadastrar</button>
+      <button type="button" class="close" onclick="closeModal(modalCadastroCliente)">Fechar</button>
+    </form>
+  </div>
+  <!--Cadastro de Fornecedor -->
+  <div id="modalCadastroFornecedor" class="modal">
+    <form id="formCadastroFornecedor">
+      <h2>Cadastrar Fornecedor</h2>
+      <label for="cpfCnpjFornecedor">CPF/CNPJ:</label>
+      <input type="text" id="cpfCnpjFornecedor" required><br>
+      <label for="nomeFornecedor">Nome:</label>
+      <input type="text" id="nomeFornecedor" required><br>
+      <label for="cidadeFornecedor">Cidade:</label>
+      <input type="text" id="cidadeFornecedor" required><br>
+      <label for="estadoFornecedor">Estado:</label>
+      <input type="text" id="estadoFornecedor" required><br>
+      <button type="submit">Cadastrar</button>
+      <button type="button" class="close" onclick="closeModal(modalCadastroFornecedor)">Fechar</button>
+    </form>
+  </div>
+  <!--Cadastro de Bens -->
+  <div id="modalCadastroBens" class="modal">
+    <form id="formCadastroBens">
+      <h2>Cadastrar Bens</h2>
+      <label for="nomeBem">Nome do Bem:</label>
+      <input type="text" id="nomeBem" required><br>
+      <label for="valorBem">Valor:</label>
+      <input type="number" id="valorBem" required><br>
+      <button type="submit">Cadastrar</button>
+      <button type="button" class="close" onclick="closeModal(modalCadastroBens)">Fechar</button>
+    </form>
+  </div>
+  <!--Relatórios -->
+  <div id="modalRelatorios" class="modal">
+    <div class="modal-content">
+      <h2>Relatórios</h2>
+      <button id="btnGerarBalancoPatrimonial">Balanço Patrimonial</button>
+      <button id="btnGerarRelatorioClientes">Relatório de Clientes</button>
+      <button id="btnGerarRelatorioFornecedores">Relatório de Fornecedores</button>
+      <button type="button" class="close" onclick="closeModal(modalRelatorios)">Fechar</button>
+    </div>
+  </div>
   <script src="scripts.js"></script>
 </body>
 </html>

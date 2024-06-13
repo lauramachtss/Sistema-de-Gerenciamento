@@ -46,11 +46,13 @@ formVendaProduto.addEventListener('submit', function(event) {
   const vendaAVista = document.getElementById('vendaAVista').checked;
   const vendaAPrazo = document.getElementById('vendaAPrazo').checked;
 
-  if (vendaAVista) {
+if (vendaAVista) {
     alert("Vendendo o produto à vista...");
-  } else if (vendaAPrazo) {
+  } 
+else if (vendaAPrazo) {
     alert("Vendendo o produto a prazo...");
-  } else {
+  } 
+else {
     alert("Por favor, selecione ao menos uma opção de venda.");
   }
 
@@ -88,32 +90,37 @@ function calcularLucro(precoVenda, custo) {
 }
 
 window.onclick = function(event) {
-  if (event.target == modalCadastroProduto) {
+if (event.target == modalCadastroProduto) {
     closeModal(modalCadastroProduto);
-  } else if (event.target == modalVendaProduto) {
+  } 
+else if (event.target == modalVendaProduto) {
     closeModal(modalVendaProduto);
-  } else if (event.target == modalCadastroCliente) {
+  } 
+else if (event.target == modalCadastroCliente) {
     closeModal(modalCadastroCliente);
-  } else if (event.target == modalCadastroFornecedor) {
+  } 
+else if (event.target == modalCadastroFornecedor) {
     closeModal(modalCadastroFornecedor);
-  } else if (event.target == modalCadastroBens) {
+  } 
+else if (event.target == modalCadastroBens) {
     closeModal(modalCadastroBens);
-  } else if (event.target == modalRelatorios) {
+  } 
+else if (event.target == modalRelatorios) {
     closeModal(modalRelatorios);
   }
 };
 
 document.getElementById('btnGerarBalancoPatrimonial').addEventListener('click', function() {
   alert('Gerando Balanço Patrimonial...');
-  // Código para gerar balanço patrimonial
+  //balanço patrimonial
 });
 
 document.getElementById('btnGerarRelatorioClientes').addEventListener('click', function() {
   alert('Gerando Relatório de Clientes...');
-  // Código para gerar relatório de clientes
+  //relatório de clientes
 });
 
 document.getElementById('btnGerarRelatorioFornecedores').addEventListener('click', function() {
   alert('Gerando Relatório de Fornecedores...');
-  // Código para gerar relatório de fornecedores
+  //relatório de fornecedores
 });
